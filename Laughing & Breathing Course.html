@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn How To Laugh (By Dev Khemani)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ffffff, #00bcd4, #4caf50);
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            color: #FFD700;
+            text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);
+            margin-top: 30px;
+            animation: glow 1.5s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            0% {
+                text-shadow: 3px 3px 15px rgba(255, 215, 0, 0.6), 0 0 30px rgba(255, 215, 0, 0.8);
+            }
+            100% {
+                text-shadow: 3px 3px 15px rgba(255, 215, 0, 0.8), 0 0 50px rgba(255, 215, 0, 1);
+            }
+        }
+        p {
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 40px;
+            font-weight: 400;
+            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(15px);
+            transform: scale(1);
+            transition: 0.3s ease-in-out;
+        }
+        .container:hover {
+            transform: scale(1.05);
+        }
+        .exercise {
+            margin: 30px 0;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: 0.3s ease;
+        }
+        .exercise:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            font-size: 1.8rem;
+            color: #4caf50;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+        }
+        button {
+            background: linear-gradient(45deg, #4caf50, #00bcd4);
+            color: #fff;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        button:hover {
+            background: linear-gradient(45deg, #00bcd4, #4caf50);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+    <script>
+        function playAudio(id) {
+            document.getElementById(id).play();
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Learn How To Laugh (By Dev Khemani)</h1>
+        <p>Happy Birthday Vyomi! 🎉</p>
+        
+        <div class="exercise">
+            <h2>1️⃣ Breathing Practice</h2>
+            <p>Take a deep breath in through your nose, filling your belly, then exhale slowly while saying "ha-ha-ha".</p>
+            <button onclick="playAudio('breathingAudio')">Try It</button>
+            <audio id="breathingAudio" class="audio-player" src="breathing.mp3"></audio>
+        </div>
+
+        <div class="exercise">
+            <h2>2️⃣ Laughing in Bursts</h2>
+            <p>Instead of continuous laughing, laugh in short bursts: "Ha-ha-ha" ➝ Breathe ➝ "Ha-ha-ha".</p>
+            <button onclick="playAudio('burstLaughAudio')">Practice</button>
+            <audio id="burstLaughAudio" class="audio-player" src="burst-laugh.mp3"></audio>
+        </div>
+
+        <div class="exercise">
+            <h2>3️⃣ Adjusting Your Tone</h2>
+            <p>Try laughing in different tones: Deep "Ho-ho-ho" or Soft "He-he-he" to balance your pitch.</p>
+            <button onclick="playAudio('deepLaugh')">Deep Laugh</button>
+            <audio id="deepLaugh" class="audio-player" src="deep-laugh.mp3"></audio>
+            <button onclick="playAudio('softLaugh')">Soft Laugh</button>
+            <audio id="softLaugh" class="audio-player" src="soft-laugh.mp3"></audio>
+        </div>
+    </div>
+</body>
+</html>
